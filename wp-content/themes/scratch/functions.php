@@ -33,3 +33,19 @@ function scratch_scripts() {
   wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', 'jquery' );
 }
 add_action( 'wp_enqueue_scripts', 'scratch_scripts' );
+
+  // Sidebars
+  function scratch_widgets_init() {
+    register_sidebar(
+        array (
+            'name' => __( 'Footer', 'scratch' ),
+            'id' => 'sidebar-footer',
+            'description' => __( 'Custom Sidebar', 'scratch' ),
+            'before_widget' => '<section class="widget col-md-6 col-lg-4 d-flex flex-column align-items-center">',
+            'after_widget' => "</section>",
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        )
+    );
+  }
+  add_action( 'widgets_init', 'scratch_widgets_init' );
