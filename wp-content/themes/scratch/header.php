@@ -20,3 +20,18 @@
 
 <div id="page" class="wrapper">
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="navbar-brand"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?= get_stylesheet_directory_uri() ?>/images/logo.svg" alt="<?php bloginfo( 'name' ); ?>"></a></div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <?php wp_nav_menu( array(
+        'theme_location' => 'primary',
+      )); ?>
+    </div>
+
+  </nav>

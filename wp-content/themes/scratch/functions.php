@@ -25,6 +25,8 @@ add_action( 'after_setup_theme', 'scratch_setup' );
 function scratch_scripts() {
   wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/main.min.css' );
 
-  //wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'main-style', get_template_directory_uri() . 'jquery' );
+
+  wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', 'jquery' );
 }
 add_action( 'wp_enqueue_scripts', 'scratch_scripts' );
