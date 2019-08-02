@@ -1,0 +1,31 @@
+
+$primary: rgb(187, 104, 60);
+$white: #fff;
+
+$enable-rounded: false;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 6.25)
+  ),
+  $spacers
+);
+
+
+// changement de la typo
+$font-family-base: 'Lato', sans-serif;
+
+// changement du hamburger
+$navbar-light-color:                lighten($primary, 0.3);
+$navbar-light-hover-color:          $primary;
+$navbar-light-active-color:         $primary;
+$navbar-light-toggler-border-color: transparent;

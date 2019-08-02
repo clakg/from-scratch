@@ -11,7 +11,7 @@
 get_header();
 ?>
 
-<main class="py-5">
+<main class="py-6">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
